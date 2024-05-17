@@ -27,6 +27,10 @@ typedef uint64_t CP_key;
 
 void cp_init(void);
 int cp_move_coords(const int x, const int y);
+int cp_move_up(int amt);
+int cp_move_down(int amt);
+int cp_move_left(int amt);
+int cp_move_right(int amt);
 int cp_uncook(void);
 int cp_cook(void);
 CP_key cp_read_key(void);

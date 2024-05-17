@@ -25,6 +25,6 @@ void cp_init(void)
 {
 	struct winsize w;
 	ioctl(fileno(stdout), TIOCGWINSZ, &w);
-	cp_max_x = w.ws_row;
-	cp_max_y = w.ws_col;
+	cp_max_x = w.ws_col;
+	cp_max_y = w.ws_row;
 }
