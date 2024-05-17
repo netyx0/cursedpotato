@@ -35,16 +35,14 @@ CP_key cp_read_key(void);
 #define CP_KEY_ASCII(c)     ((CP_key) (c))
 
 #define CP_KEY_NUL          ((CP_key) 0x00)
-/* 0x01 - 0x06 unused */
-#define CP_KEY_BELL         ((CP_key) 0x07)
-/* 0x08 unused - BS is 0x7F      ((CP_key) 0x08) */
+/* 0x01 - 0x08 unused */
 #define CP_KEY_TAB          ((CP_key) 0x09)
 #define CP_KEY_HTAB         ((CP_key) 0x09) /* alias */
 #define CP_KEY_LINEFEED     ((CP_key) 0x0A)
 #define CP_KEY_NEWLINE      ((CP_key) 0x0A) /* alias */
-/*  0x0B - 0x19 unused */
-#define CP_KEY_ESC          ((CP_key) 0x1A)
-/* 0x1B - 0x1F unused */
+/*  0x0B - 0x1A unused */
+#define CP_KEY_ESC          ((CP_key) 0x1B)
+/* 0x1C - 0x1F unused */
 #define CP_KEY_SPACE        ((CP_key) 0x20)
 #define CP_KEY_EXCLAIM      ((CP_key) 0x21)
 #define CP_KEY_DQUOTES      ((CP_key) 0x22)
@@ -173,35 +171,42 @@ CP_key cp_read_key(void);
 #define CP_KEY_CTRLN        ((CP_key) 0x0E)
 #define CP_KEY_CTRLO        ((CP_key) 0x0F)
 #define CP_KEY_CTRLP        ((CP_key) 0x10)
-#define CP_KEY_CTRLQ        ((CP_key) 0x10)
-#define CP_KEY_CTRLR        ((CP_key) 0x11)
-#define CP_KEY_CTRLS        ((CP_key) 0x12)
-#define CP_KEY_CTRLT        ((CP_key) 0x13)
-#define CP_KEY_CTRLU        ((CP_key) 0x14)
-#define CP_KEY_CTRLV        ((CP_key) 0x15)
-#define CP_KEY_CTRLW        ((CP_key) 0x16)
-#define CP_KEY_CTRLX        ((CP_key) 0x17)
-#define CP_KEY_CTRLY        ((CP_key) 0x18)
-#define CP_KEY_CTRLZ        ((CP_key) 0x19)
+#define CP_KEY_CTRLQ        ((CP_key) 0x11)
+#define CP_KEY_CTRLR        ((CP_key) 0x12)
+#define CP_KEY_CTRLS        ((CP_key) 0x13)
+#define CP_KEY_CTRLT        ((CP_key) 0x14)
+#define CP_KEY_CTRLU        ((CP_key) 0x15)
+#define CP_KEY_CTRLV        ((CP_key) 0x16)
+#define CP_KEY_CTRLW        ((CP_key) 0x17)
+#define CP_KEY_CTRLX        ((CP_key) 0x18)
+#define CP_KEY_CTRLY        ((CP_key) 0x19)
+#define CP_KEY_CTRLZ        ((CP_key) 0x1A)
+
+#define CP_KEY_PGUP         ((CP_key) 0x7E355B1B)
+#define CP_KEY_PGDN         ((CP_key) 0x7E365B1B)
 
 #define CP_KEY_UPARROW      ((CP_key) 0x415B1A)
-#define CP_KEY_DOWNARROW    ((CP_key) 0x415B1A)
+#define CP_KEY_DOWNARROW    ((CP_key) 0x425B1A)
 #define CP_KEY_RIGHTARROW   ((CP_key) 0x435B1A)
 #define CP_KEY_LEFTARROW    ((CP_key) 0x445B1A)
 
-#define CP_KEY_F1           ((CP_key) 0x31315B1A)
-#define CP_KEY_F2           ((CP_key) 0x32315B1A)
-#define CP_KEY_F3           ((CP_key) 0x33315B1A)
-#define CP_KEY_F4           ((CP_key) 0x34315B1A)
-#define CP_KEY_F5           ((CP_key) 0x35315B1A)
-#define CP_KEY_F6           ((CP_key) 0x37315B1A)
-#define CP_KEY_F7           ((CP_key) 0x38315B1A)
-#define CP_KEY_F8           ((CP_key) 0x39315B1A)
-#define CP_KEY_F9           ((CP_key) 0x30325B1A)
-#define CP_KEY_F10          ((CP_key) 0x31325B1A)
-#define CP_KEY_F11          ((CP_key) 0x33325B1A)
-#define CP_KEY_F12          ((CP_key) 0x34325B1A)
+#define CP_KEY_F1           ((CP_key) 0x415B5B1B)
+#define CP_KEY_F2           ((CP_key) 0x425B5B1B)
+#define CP_KEY_F3           ((CP_key) 0x435B5B1B)
+#define CP_KEY_F4           ((CP_key) 0x445B5B1B)
+#define CP_KEY_F5           ((CP_key) 0x455B5B1B)
+#define CP_KEY_F6           ((CP_key) 0x37355B99)
+#define CP_KEY_F7           ((CP_key) 0x38315B99)
+#define CP_KEY_F8           ((CP_key) 0x39315B99)
+#define CP_KEY_F9           ((CP_key) 0x30325B99)
+#define CP_KEY_F10          ((CP_key) 0x31325B99)
+#define CP_KEY_F11          ((CP_key) 0x33325B99)
+#define CP_KEY_F12          ((CP_key) 0x34325B99)
 
+
+#define CP_KEY_HOME         ((CP_key) 0x7E315B1B)
+#define CP_KEY_END          ((CP_key) 0x7E345B1B)
+#define CP_KEY_INSERT       ((CP_key) 0x7E325B1B)
 #define CP_KEY_DEL          ((CP_key) 0x7E335B1A)
 
 #define CP_KEY_ALT(c)  ((CP_key) (c) << 8 + 0x1A)
