@@ -7,9 +7,9 @@ LDFLAGS =
 LDLIBS = 
 PREFIX = /usr/local
 
-all: build/libcinderpelt.a
+all: build/libcursedpotato.a
 
-build/libcinderpelt.a: build/modes.o build/input.o build/misc.o build/move.o build/init.o
+build/libcursedpotato.a: build/modes.o build/input.o build/misc.o build/move.o build/init.o
 	ar rcs $@  build/modes.o build/input.o build/misc.o build/move.o build/init.o
 
 build/modes.o: src/modes.c
@@ -37,5 +37,5 @@ clean:
 
 install: all
 	mkdir -p $(PREFIX)/include/netyx/
-	cp build/libcinderpelt.a $(PREFIX)/lib/
+	cp build/libcursedpotato.a $(PREFIX)/lib/
 	cp include/* $(PREFIX)/include/netyx/
