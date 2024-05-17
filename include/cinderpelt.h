@@ -30,6 +30,9 @@ int cp_move_coords(const int x, const int y);
 int cp_uncook(void);
 int cp_cook(void);
 CP_key cp_read_key(void);
+int cp_echo(void);
+int cp_noecho(void);
+void cp_clear(void);
 
 /* keycodes! */
 #define CP_KEY_ASCII(c)     ((CP_key) (c))
@@ -38,8 +41,9 @@ CP_key cp_read_key(void);
 /* 0x01 - 0x08 unused */
 #define CP_KEY_TAB          ((CP_key) 0x09)
 #define CP_KEY_HTAB         ((CP_key) 0x09) /* alias */
-#define CP_KEY_LINEFEED     ((CP_key) 0x0A)
-#define CP_KEY_NEWLINE      ((CP_key) 0x0A) /* alias */
+#define CP_KEY_ENTER        ((CP_key) 0x0A)
+#define CP_KEY_LINEFEED     ((CP_key) 0x0A) /* aliases */
+#define CP_KEY_NEWLINE      ((CP_key) 0x0A) /* aliases */
 /*  0x0B - 0x1A unused */
 #define CP_KEY_ESC          ((CP_key) 0x1B)
 /* 0x1C - 0x1F unused */

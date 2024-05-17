@@ -69,3 +69,23 @@ int cp_cook(void)
 	        t.c_iflag != t_orig.c_iflag || t.c_oflag != t_orig.c_oflag ||
 	        t.c_lflag != t_orig.c_lflag || t.c_cflag != t_orig.c_cflag);
 }
+
+int cp_noecho(void)
+{
+	struct termios t;
+	if (tcgetattr(0, &t)) {
+		return 1;
+	}
+	t.c_lflag &= ~ECHO;
+	return tcsetattr(0, TCSANOW, &t);
+}
+
+int cp_echo(void)
+{
+	struct termios t;
+	if (tcgetattr(0, &t)) {
+		return 1;
+	}
+	t.c_lflag |= ECHO;
+	return tcsetattr(0, TCSANOW, &t);
+}
