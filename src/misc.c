@@ -19,5 +19,5 @@
 
 void cp_clear(void)
 {
-	printf("\033[H");
+	printf("\033[2J");
 }

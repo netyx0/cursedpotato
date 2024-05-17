@@ -193,15 +193,15 @@ void cp_clear(void);
 #define CP_KEY_PGUP         ((CP_key) 0x7E355B1B)
 #define CP_KEY_PGDN         ((CP_key) 0x7E365B1B)
 
-#define CP_KEY_UPARROW      ((CP_key) 0x415B1A)
-#define CP_KEY_DOWNARROW    ((CP_key) 0x425B1A)
-#define CP_KEY_RIGHTARROW   ((CP_key) 0x435B1A)
-#define CP_KEY_LEFTARROW    ((CP_key) 0x445B1A)
+#define CP_KEY_UPARROW      ((CP_key) 0x415B1B)
+#define CP_KEY_DOWNARROW    ((CP_key) 0x425B1B)
+#define CP_KEY_RIGHTARROW   ((CP_key) 0x435B1B)
+#define CP_KEY_LEFTARROW    ((CP_key) 0x445B1B)
 
-#define CP_KEY_UP           ((CP_key) 0x415B1A)
-#define CP_KEY_DOWN         ((CP_key) 0x425B1A)
-#define CP_KEY_RIGHT        ((CP_key) 0x435B1A)
-#define CP_KEY_LEFT         ((CP_key) 0x445B1A)
+#define CP_KEY_UP           ((CP_key) 0x415B1B)
+#define CP_KEY_DOWN         ((CP_key) 0x425B1B)
+#define CP_KEY_RIGHT        ((CP_key) 0x435B1B)
+#define CP_KEY_LEFT         ((CP_key) 0x445B1B)
 
 #define CP_KEY_F1           ((CP_key) 0x415B5B1B)
 #define CP_KEY_F2           ((CP_key) 0x425B5B1B)
