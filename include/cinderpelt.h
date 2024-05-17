@@ -45,10 +45,9 @@ void cp_clear(void);
 /* 0x01 - 0x08 unused */
 #define CP_KEY_TAB          ((CP_key) 0x09)
 #define CP_KEY_HTAB         ((CP_key) 0x09) /* alias */
-#define CP_KEY_ENTER        ((CP_key) 0x0A)
-#define CP_KEY_LINEFEED     ((CP_key) 0x0A) /* aliases */
-#define CP_KEY_NEWLINE      ((CP_key) 0x0A) /* aliases */
-/*  0x0B - 0x1A unused */
+/* 0x0A - 0x0C unused */
+#define CP_KEY_ENTER        ((CP_key) 0x0D)
+/*  0x0E - 0x1A unused */
 #define CP_KEY_ESC          ((CP_key) 0x1B)
 /* 0x1C - 0x1F unused */
 #define CP_KEY_SPACE        ((CP_key) 0x20)

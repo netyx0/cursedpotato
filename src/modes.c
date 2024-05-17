@@ -20,6 +20,7 @@
 #include <termios.h>
 
 static bool is_raw = false;
+static bool orig_init = false;
 static struct termios t_orig;
 
 int cp_uncook(void)
@@ -39,8 +40,10 @@ int cp_uncook(void)
 	}
 
 	is_raw = true;
-	memcpy(&t_orig, &t, sizeof(struct termios));
-
+	if (!orig_init) {
+		orig_init = true;
+		memcpy(&t_orig, &t, sizeof(struct termios));
+	}
 	t.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL |
 	               IXON);
 	iflag = t.c_iflag;
@@ -64,7 +67,7 @@ int cp_cook(void)
 	if (!is_raw) {
 		return 0;
 	}
-
+	is_raw = false;
 	return (tcsetattr(0, TCSANOW, &t_orig) || tcgetattr(0, &t) ||
 	        t.c_iflag != t_orig.c_iflag || t.c_oflag != t_orig.c_oflag ||
 	        t.c_lflag != t_orig.c_lflag || t.c_cflag != t_orig.c_cflag);
