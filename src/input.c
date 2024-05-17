@@ -15,4 +15,21 @@
  * with cinderpelt. If not, see <https://www.gnu.org/licenses/>.
 */
 
-int cp_move_coords(int x, int y);
+#include <string.h>
+#include <unistd.h>
+
+#include "../include/cinderpelt.h"
+
+CP_key cp_read_key(void)
+{
+	CP_key ret;
+	char arr[8];
+
+	ret = 0;
+	memset(arr, '\0', 8);
+	read(0, arr, 8);
+	for (int i = 0; i < 8; i++) {
+		ret += arr[i] << (i * 8);
+	}
+	return ret;
+}
