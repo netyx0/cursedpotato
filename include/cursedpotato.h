@@ -219,7 +219,7 @@ void cp_clear(void);
 #define CP_KEY_HOME         ((CP_key) 0x7E315B1B)
 #define CP_KEY_END          ((CP_key) 0x7E345B1B)
 #define CP_KEY_INSERT       ((CP_key) 0x7E325B1B)
-#define CP_KEY_DEL          ((CP_key) 0x7E335B1A)
+#define CP_KEY_DEL          ((CP_key) 0x7E335B1B)
 
 #define CP_KEY_ALT(c)  ((CP_key) (c) << 8 + 0x1A)
 
