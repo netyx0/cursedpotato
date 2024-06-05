@@ -36,6 +36,5 @@ clean:
 	rm -rf build
 
 install: all
-	mkdir -p $(PREFIX)/include/netyx/
 	cp build/libcursedpotato.a $(PREFIX)/lib/
-	cp include/* $(PREFIX)/include/netyx/
+	cp include/* $(PREFIX)/include/
