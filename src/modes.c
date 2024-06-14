@@ -1,4 +1,5 @@
-/*
+/* Copyright 2024 Alex Lo
+ *
  * This file is part of cursedpotato.
  *
  * cursedpotato is free software: you can redistribute it and/or modify it
